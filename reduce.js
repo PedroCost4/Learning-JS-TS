@@ -10,7 +10,6 @@ const dailysalary = staff.reduce((acc, cur) => {
     console.log(cur.salary)
     acc += cur.salary
     return acc
-    
 } , 0)
 
 console.log(dailysalary)
