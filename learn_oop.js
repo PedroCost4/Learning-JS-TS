@@ -40,11 +40,17 @@ class Home {
     }
 }
 
-const pedro = new Person("Pedro", 28);
-pedro.setJob("programmer");
+class Dev extends Person{
+    constructor(name, age, company,salary,language){
+        super(name,age);
+        this.company = company;
+        this.salary = salary;
+        this.language = language;
+    }
+    sayHi(){
+        console.log(`Hi, I'm ${this.getName()} and I'm working at ${this.company} and earn ${this.salary} per month. I'm learning ${this.language}`);
+    }
+}
 
-console.log(pedro);
-
-let home = new Home("Calle de la casa", 100000, []);
-home.addResidents(pedro);
-console.log(home);
+let programmer = new Dev("Pedro",19,"Google","$100000","JavaScript");
+programmer.sayHi();
